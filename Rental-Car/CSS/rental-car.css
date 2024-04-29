@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #E5E5E5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 74px;
+  border-radius: 32px;
+}
+.container header h1 {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Merriweather", sans-serif;
+  color: #0D1C52;
+}
+.container main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.container main .pick-up {
+  width: 608px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.container main .pick-up .location {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.container main .pick-up .location label {
+  color: #0D1C52;
+  font-weight: bold;
+  font-size: 14px;
+}
+.container main .pick-up .location input {
+  border: 1px solid #8F9DCE;
+  padding: 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #0D1C52;
+}
+.container main .pick-up .location input::-moz-placeholder {
+  font-size: 16px;
+  color: #0D1C52;
+  font-weight: bold;
+}
+.container main .pick-up .location input::placeholder {
+  font-size: 16px;
+  color: #0D1C52;
+  font-weight: bold;
+}
+.container main .pick-up .deliver-check {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.container main .pick-up .deliver-check span {
+  color: #0D1C52;
+  font-weight: bold;
+}
+.container main .pick-up .deliver-check .check-deliver {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  border: 1px solid #8F9DCE;
+  border-radius: 4px;
+  transition: 500ms background-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container main .pick-up .deliver-check .check-deliver:has(input:checked) {
+  background-color: #0D1C52;
+}
+.container main .pick-up .deliver-check .check-deliver:has(input:checked) i {
+  transform: scale(1);
+}
+.container main .pick-up .deliver-check .check-deliver input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.container main .pick-up .deliver-check .check-deliver i {
+  transform: scale(0);
+  transition: 500ms transform;
+  color: #FFFFFF;
+}
+.container main .dates {
+  display: flex;
+  gap: 16px;
+}
+.container main .dates .date-pickup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.container main .dates .date-pickup h6 {
+  color: #0D1C52;
+  font-size: 14px;
+  font-weight: bold;
+}
+.container main .dates .date-pickup .day-month-year {
+  align-items: center;
+  padding: 16px;
+  display: flex;
+  gap: 10px;
+  border: 1px solid #8F9DCE;
+  border-radius: 4px;
+}
+.container main .dates .date-pickup .day-month-year span {
+  flex: 1;
+  font-weight: 18px;
+  color: #0D1C52;
+  font-weight: bold;
+}
+.container main .dates .date-pickup .day-month-year i:nth-of-type(1) {
+  width: 33px;
+  height: 33px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0D1C52;
+}
+.container main .dates .date-pickup .day-month-year i:nth-of-type(2) {
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0D1C52;
+}
+.container main .dates .date-pickup .time {
+  display: flex;
+  gap: 0;
+  border: 1px solid #8F9DCE;
+  border-radius: 4px;
+}
+.container main .dates .date-pickup .time .hour {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex: 1;
+  border-right: 1px solid #8F9DCE;
+  padding: 16px;
+}
+.container main .dates .date-pickup .time .hour span {
+  flex: 1;
+  font-weight: 18px;
+  color: #0D1C52;
+  font-weight: bold;
+}
+.container main .dates .date-pickup .time .hour i:nth-of-type(1) {
+  width: 33px;
+  height: 33px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0D1C52;
+}
+.container main .dates .date-pickup .time .hour i:nth-of-type(2) {
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0D1C52;
+}
+.container main .dates .date-pickup .time .min {
+  border-left: 1px solid #8F9DCE;
+  flex: 1;
+  padding: 16px;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+.container main .dates .date-pickup .time .min span {
+  flex: 1;
+  font-weight: 18px;
+  color: #0D1C52;
+  font-weight: bold;
+}
+.container main .dates .date-pickup .time .min i {
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0D1C52;
+}
+.container main .dates .date-delivery {
+  flex: 1;
+}
+.container main .age-check {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.container main .age-check span {
+  color: #0D1C52;
+  font-weight: bold;
+}
+.container main .age-check .check-deliver {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  border: 1px solid #8F9DCE;
+  border-radius: 4px;
+  transition: 500ms background-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container main .age-check .check-deliver:has(input:checked) {
+  background-color: #0D1C52;
+}
+.container main .age-check .check-deliver:has(input:checked) i {
+  transform: scale(1);
+}
+.container main .age-check .check-deliver input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.container main .age-check .check-deliver i {
+  transform: scale(0);
+  transition: 500ms transform;
+  color: #FFFFFF;
+}
+.container main .age-check > i {
+  width: 29px;
+  height: 29px;
+  font-size: 20px;
+  margin-left: -3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container main .infos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.container main .infos .info {
+  display: flex;
+  gap: 9px;
+}
+.container main .infos .info i {
+  width: 22.5px;
+  height: 22.5px;
+  font-size: 20px;
+  color: #0D1C52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container main .infos .info span {
+  color: #0D1C52;
+  font-weight: bold;
+  font-size: 18px;
+}
+.container .search-button button {
+  padding: 42px;
+  background-color: #FE6F4F;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 34px;
+  width: 100%;
+  cursor: pointer;
+}/*# sourceMappingURL=rental-car.css.map */

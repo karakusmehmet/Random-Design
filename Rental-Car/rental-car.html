@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Car</title>
+    <link rel="stylesheet" href="CSS/rental-car.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Search for a rental car</h1>
+        </header>
+        <main>
+            <div class="pick-up">
+                <div class="location">
+                    <label for="location">Pick up location</label>
+                    <input placeholder="City, airport, region, district..." id="location" type="text">
+                </div>
+                <div class="deliver-check">
+                    <label class="check-deliver">
+                        <input type="checkbox">
+                        <i class="fa-solid fa-check"></i>
+                    </label>
+                    <span>Deliver the car somewhere else</span>
+                </div>
+            </div>
+            <div class="dates">
+                <div class="date-pickup">
+                    <h6>Date of pickup</h6>
+                    <div class="day-month-year">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span>Sat 26 Mar 2022</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="time">
+                        <div class="hour">
+                            <i class="fa-regular fa-calendar-check"></i>
+                            <span>10</span>
+                            <i class="fa-solid fa-chevron-down"></i>                        
+                        </div>
+                        <div class="min">
+                            <span>00</span>
+                            <i class="fa-solid fa-chevron-down"></i>                        
+                        </div>
+                    </div>    
+                </div>
+                <div class="date-delivery">
+                    <div class="date-pickup">
+                        <h6>Date of pickup</h6>
+                        <div class="day-month-year">
+                            <i class="fa-regular fa-calendar-check"></i>
+                            <span>Sat 26 Mar 2022</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="time">
+                            <div class="hour">
+                                <i class="fa-regular fa-calendar-check"></i>
+                                <span>10</span>
+                                <i class="fa-solid fa-chevron-down"></i>                        
+                            </div>
+                            <div class="min">
+                                <span>00</span>
+                                <i class="fa-solid fa-chevron-down"></i>                        
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+            <div class="age-check">
+                <label class="check-deliver">
+                    <input type="checkbox">
+                    <i class="fa-solid fa-check"></i>
+                </label>
+                <span>The driver’s age between 30 and 65?</span>
+                <i title="info" class="fa-regular fa-circle-question"></i>
+            </div>
+            <div class="infos">
+                <div class="info">
+                    <i class="fa-solid fa-check"></i>
+                    <span>No credit card fees</span>
+                </div>
+                <div class="info">
+                    <i class="fa-solid fa-check"></i>
+                    <span>No change fees</span>
+                </div>
+                <div class="info">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Price match guarantee</span>
+                </div>
+            </div>
+        </main>
+        <div class="search-button">
+            <button>Search</button>
+        </div>
+    </div>
+</body>
+</html>
