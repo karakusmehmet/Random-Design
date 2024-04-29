@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+$default-font : "Poppins" , sans-serif;
+$income-color : #7273F5;
+$expenses-color:#F572B9;
+
+@mixin flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@mixin flex-default($-gap){
+    display: flex;
+    gap: $-gap;
+}
+
+@mixin flex-col($-gap){
+    display: flex;
+    flex-direction: column;
+    gap: $-gap;
+}
+
+html,body{
+    height: 100%;
+    
+}
+body{
+    background: linear-gradient(45deg,#6F6CF5,#90C8F1);
+    @include flex-center(); 
+    font-family: $default-font;
+    font-size: 16px;
+}
+
+.container{
+    background-color: #FFFFFF;
+    padding: 72px;
+    border-radius: 25px;
+    @include flex-col(58px);
+    header{
+        
+        @include flex-col(32px);
+        h1{
+            font-family: "Merriweather" , sans-serif;
+            font-size: 32px;
+            color:#1D235A;
+            width: max-content;
+        }
+        .choose{
+            @include flex-default(0);
+            align-items: center;
+            width:696px;
+            .choose-time{
+                background-color:#EFF0FF;
+                padding: 8px;
+                border-radius: 37px;
+                @include flex-default(0);
+                label{
+                    padding: 16px 24px;
+                    text-align: center;
+                    background: transparent;
+                    transition: border-radius 300ms;
+                    cursor: pointer;
+                    &:has(input:checked) {
+                        border-radius: 28px;
+                        transition: 2ms;
+                        background: linear-gradient(-62deg,#6F6CF5,#90C8F1);
+                        span{
+                            color: #FFFFFF;
+                            
+                        }
+                    }
+                    input{
+                        appearance: none;
+                    }
+                    span{
+                        color:#1D235A;
+                        font-weight: normal;
+                    }
+                }
+            }
+            svg{
+                margin-left: auto;
+                cursor: pointer;
+            }
+        }
+    }
+    main{
+        @include flex-col(24px);
+        align-items: center;
+        .graphic{
+            background-color: transparent;
+            width: 702px;
+            height: 311px;
+            position: relative;
+            .rows{
+                @include flex-col(45px);
+                .row{
+                    @include flex-default(16px);
+                    align-items: center;
+                    span:first-child{
+                        color: #6E729B;
+                        font-size: 14px;
+                        width: 18px;
+                        height: 21px;
+                        @include flex-default(0);
+                        justify-content: flex-end;
+                    }
+                    .line{
+                        width: 100%;
+                        height: 1px;
+                        background-color: #D9DBF3;
+                    
+                    }
+                }
+            }
+            .columns{
+                position: absolute;
+                z-index: 1;
+                top: 38px;
+                left: 50px;
+                
+                @include flex-default(77px);
+                .col{
+                    &:nth-of-type(1){
+                        .lines{
+                            .first{
+                                height: 236px;
+                            }
+                            .second{
+                                height: 112px;
+                            }
+                        }
+                    }
+                    &:nth-of-type(2){
+                        .lines{
+                            .first{
+                                height: 150px;
+                            }
+                            .second{
+                                height: 49px;
+                            }
+                        }
+                    }
+                    &:nth-of-type(3){
+                        .lines{
+                            .first{
+                                height: 100px;
+                            }
+                            .second{
+                                height: 25px;
+                            }
+                        }
+                    }
+                    &:nth-of-type(4){
+                        .lines{
+                            .first{
+                                height: 219px;
+                            }
+                            .second{
+                                height: 112px;
+                            }
+                        }
+                    }
+                    &:nth-of-type(5){
+                        .lines{
+                            .first{
+                                height: 139px;
+                            }
+                            .second{
+                                height: 86px;
+                            }
+                        }
+                    }
+                    &:nth-of-type(6){
+                        .lines{
+                            .first{
+                                height: 92px;
+                            }
+                            .second{
+                                height: 49px;
+                            }
+                        }
+                    }
+                    &:nth-of-type(7){
+                        .lines{
+                            .first{
+                                height: 38px;
+                            }
+                            .second{
+                                height: 19px;
+                            }
+                        }
+                    }
+                    @include flex-col(20px);
+                    .lines{
+                        @include flex-default(4px);
+                        margin-top: auto;
+                        justify-content: center;
+                        .first{
+                            width: 11px;
+                            height: 236px;
+                            background-color: $income-color;
+                            border-radius: 20px;
+                            align-self: end;
+                        }
+                        .second{
+                            width: 4px;
+                            height: 112px;
+                            background-color: $expenses-color;
+                            align-self: end;
+                            border-radius: 20px
+                            
+                        }
+                    }
+                    .day{
+                        color: #6E729B;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .information{
+            @include flex-default(16px);
+            .info{
+                @include flex-default(4px);
+                align-items: center;
+                font-size: 14px;
+                color: #1D235A;
+                font-weight: normal;
+                span{
+                    width: 13px;
+                    height: 13px;
+                    border-radius: 50%;
+                    &.blue{
+                        background-color: $income-color;
+                    }
+                    &.pink{
+                        background-color: $expenses-color;
+                    }
+                }
+            }
+        }
+    }
+}
+

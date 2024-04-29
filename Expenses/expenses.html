@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses</title>
+    <link rel="stylesheet" href="CSS/expenses.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Expenses</h1>
+            <div class="choose">
+                <div class="choose-time">
+                    <label class="week time">
+                        <input class="one" checked name="time" type="radio">
+                        <span>Weekly</span>
+                    </label>
+                    <label class="month time">
+                        <input class="two" name="time" type="radio">
+                        <span>Monthly</span>
+                    </label>
+                    <label class="year time">
+                        <input class="three" name="time" type="radio">
+                        <span>Yearly</span>
+                    </label>
+                </div>
+                <svg width="30" height="7" viewBox="0 0 30 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="3" cy="3.5" r="3" fill="#1D235A"/>
+                    <circle cx="15" cy="3.5" r="3" fill="#1D235A"/>
+                    <circle cx="27" cy="3.5" r="3" fill="#1D235A"/>
+                </svg>
+            </div>
+            
+        </header>
+        <main>
+            <div class="graphic">
+                <div class="rows">
+                    <div class="row">
+                        <span>4K</span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="row">
+                        <span>3K</span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="row">
+                        <span>2K</span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="row">
+                        <span>1K</span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="row">
+                        <span>0 </span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="col">
+                        <div class="lines">
+                            <div class="first"></div>
+                            <div class="second"></div>
+                        </div>
+                        <div class="day">Mon</div>
+                    </div>
+                    <div class="col">
+                        <div class="lines">
+                            <div class="first"></div>
+                            <div class="second"></div>
+                        </div>
+                        <div class="day">Tue</div>
+                    </div>
+                    <div class="col">
+                        <div class="lines">
+                            <div class="first"></div>
+                            <div class="second"></div>
+                        </div>
+                        <div class="day">Wed</div>
+                    </div>
+                    <div class="col">
+                        <div class="lines">
+                            <div class="first"></div>
+                            <div class="second"></div>
+                        </div>
+                        <div class="day">Thu</div>
+                    </div>
+                    <div class="col">
+                        <div class="lines">
+                            <div width="30px" height="60px" class="first"></div>
+                            <div class="second"></div>
+                        </div>
+                        <div class="day">Fri</div>
+                    </div>
+                    <div class="col">
+                        <div class="lines">
+                            <div class="first"></div>
+                            <div class="second"></div>
+                        </div>
+                        <div class="day">Sat</div>
+                    </div>
+                    <div class="col">
+                        <div class="lines">
+                            <div class="first"></div>
+                            <div class="second"></div>
+                        </div>
+                        <div class="day">Sun</div>
+                    </div>
+                </div>
+            </div>
+            <div class="information">
+                <div class="income info"><span class="blue"></span>Income</div>
+                <div class="expenses info"><span class="pink"></span>Expenses</div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

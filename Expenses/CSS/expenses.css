@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(45deg, #6F6CF5, #90C8F1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  background-color: #FFFFFF;
+  padding: 72px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+}
+.container header {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.container header h1 {
+  font-family: "Merriweather", sans-serif;
+  font-size: 32px;
+  color: #1D235A;
+  width: -moz-max-content;
+  width: max-content;
+}
+.container header .choose {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  width: 696px;
+}
+.container header .choose .choose-time {
+  background-color: #EFF0FF;
+  padding: 8px;
+  border-radius: 37px;
+  display: flex;
+  gap: 0;
+}
+.container header .choose .choose-time label {
+  padding: 16px 24px;
+  text-align: center;
+  background: transparent;
+  transition: border-radius 300ms;
+  cursor: pointer;
+}
+.container header .choose .choose-time label:has(input:checked) {
+  border-radius: 28px;
+  transition: 2ms;
+  background: linear-gradient(-62deg, #6F6CF5, #90C8F1);
+}
+.container header .choose .choose-time label:has(input:checked) span {
+  color: #FFFFFF;
+}
+.container header .choose .choose-time label input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.container header .choose .choose-time label span {
+  color: #1D235A;
+  font-weight: normal;
+}
+.container header .choose svg {
+  margin-left: auto;
+  cursor: pointer;
+}
+.container main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+.container main .graphic {
+  background-color: transparent;
+  width: 702px;
+  height: 311px;
+  position: relative;
+}
+.container main .graphic .rows {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+.container main .graphic .rows .row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.container main .graphic .rows .row span:first-child {
+  color: #6E729B;
+  font-size: 14px;
+  width: 18px;
+  height: 21px;
+  display: flex;
+  gap: 0;
+  justify-content: flex-end;
+}
+.container main .graphic .rows .row .line {
+  width: 100%;
+  height: 1px;
+  background-color: #D9DBF3;
+}
+.container main .graphic .columns {
+  position: absolute;
+  z-index: 1;
+  top: 38px;
+  left: 50px;
+  display: flex;
+  gap: 77px;
+}
+.container main .graphic .columns .col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container main .graphic .columns .col:nth-of-type(1) .lines .first {
+  height: 236px;
+}
+.container main .graphic .columns .col:nth-of-type(1) .lines .second {
+  height: 112px;
+}
+.container main .graphic .columns .col:nth-of-type(2) .lines .first {
+  height: 150px;
+}
+.container main .graphic .columns .col:nth-of-type(2) .lines .second {
+  height: 49px;
+}
+.container main .graphic .columns .col:nth-of-type(3) .lines .first {
+  height: 100px;
+}
+.container main .graphic .columns .col:nth-of-type(3) .lines .second {
+  height: 25px;
+}
+.container main .graphic .columns .col:nth-of-type(4) .lines .first {
+  height: 219px;
+}
+.container main .graphic .columns .col:nth-of-type(4) .lines .second {
+  height: 112px;
+}
+.container main .graphic .columns .col:nth-of-type(5) .lines .first {
+  height: 139px;
+}
+.container main .graphic .columns .col:nth-of-type(5) .lines .second {
+  height: 86px;
+}
+.container main .graphic .columns .col:nth-of-type(6) .lines .first {
+  height: 92px;
+}
+.container main .graphic .columns .col:nth-of-type(6) .lines .second {
+  height: 49px;
+}
+.container main .graphic .columns .col:nth-of-type(7) .lines .first {
+  height: 38px;
+}
+.container main .graphic .columns .col:nth-of-type(7) .lines .second {
+  height: 19px;
+}
+.container main .graphic .columns .col .lines {
+  display: flex;
+  gap: 4px;
+  margin-top: auto;
+  justify-content: center;
+}
+.container main .graphic .columns .col .lines .first {
+  width: 11px;
+  height: 236px;
+  background-color: #7273F5;
+  border-radius: 20px;
+  align-self: end;
+}
+.container main .graphic .columns .col .lines .second {
+  width: 4px;
+  height: 112px;
+  background-color: #F572B9;
+  align-self: end;
+  border-radius: 20px;
+}
+.container main .graphic .columns .col .day {
+  color: #6E729B;
+  font-size: 14px;
+}
+.container main .information {
+  display: flex;
+  gap: 16px;
+}
+.container main .information .info {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 14px;
+  color: #1D235A;
+  font-weight: normal;
+}
+.container main .information .info span {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+.container main .information .info span.blue {
+  background-color: #7273F5;
+}
+.container main .information .info span.pink {
+  background-color: #F572B9;
+}/*# sourceMappingURL=expenses.css.map */
