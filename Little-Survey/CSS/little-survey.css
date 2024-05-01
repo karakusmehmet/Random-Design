@@ -20,4 +20,134 @@ body {
   background-color: #F4F9FF;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
+}
+
+.container {
+  background-color: #FFFFFF;
+  box-shadow: 10px 10px 0px #EAF3FF;
+  border-radius: 15px;
+  padding: 60px;
+  width: 808px;
+  height: 438px;
+  text-align: center;
+}
+.container main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.container main .counter {
+  font-size: 22px;
+  font-weight: 400;
+  font-style: normal;
+  color: #8192A6;
+}
+.container main .bar {
+  width: 164px;
+  height: 8px;
+  background-color: #E8F2FF;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 5px 2px;
+  display: flex;
+  gap: 0;
+  align-items: center;
+}
+.container main .bar span {
+  width: 55.47px;
+  height: 4px;
+  background-color: #173961;
+  display: block;
+  border-radius: 10px;
+}
+.container main h2 {
+  color: #000;
+  font-size: 22px;
+  font-weight: bold;
+  align-items: center;
+  margin-top: 10px;
+}
+.container main .survey {
+  margin-top: 30px;
+  width: 665px;
+  height: 46px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  position: relative;
+}
+.container main .survey .inputs {
+  position: relative;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+}
+.container main .survey .inputs span {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  width: 576px;
+  height: 1px;
+  background-color: #B5CFF1;
+  display: block;
+}
+.container main .survey .inputs input {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: #B5CFF1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container main .survey .inputs input::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+.container main .survey .inputs input:where(:checked, :hover) {
+  background-color: #F4F9FF;
+  transform: scale(1.2);
+}
+.container main .survey .inputs input:where(:checked, :hover)::before {
+  background-color: #000;
+}
+.container main .survey .agree-disagree {
+  display: flex;
+  gap: 0px;
+  justify-content: space-between;
+}
+.container main .survey .agree-disagree span {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+}
+.container .buttons {
+  margin-top: 40px;
+  padding: 0px 20px;
+  display: flex;
+  gap: 0px;
+  justify-content: space-between;
+}
+.container .buttons .button {
+  background-color: #FFFFFF;
+  text-align: center;
+  padding: 10px 50px;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.container .buttons .button:hover {
+  background-color: #000;
+  color: #FFFFFF;
 }/*# sourceMappingURL=little-survey.css.map */
