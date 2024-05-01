@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-default($-gap) {
+    display: flex;
+    gap: $-gap;
+}
+
+@mixin flex-col($-gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $-gap;
+}
+
+$default-font :"Poppins",sans-serif;
+$default-color : "Roboto" , sans-serif;
+$profile-color : #FBFCFF;
+
+
+html,
+body {
+    height: 100%;
+    
+}
+body{
+    @include flex-center;
+    background-color: #F4F9FF;
+    font-family: $default-font;
+    font-size: 16px;
+}
