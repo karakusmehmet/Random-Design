@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+@mixin flex-default($-gap) {
+    display: flex;
+    gap: $-gap;
+}
+
+@mixin flex-col($-gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $-gap;
+}
+
+$default-font : "Roboto" , sans-serif;
+$button-color :#1B1A34;
+
+html,
+body {
+    height: 100%;
+    
+}
+body{
+    @include center();
+    background-color: #1B1A34;
+    font-family: $default-font;
+    font-size: 16px;
+    font-weight: 400;
+}
+a{
+    font-size: 16px;
+    color: #505DD1;
+    line-height: 134.7%;
+}
+.container:first-of-type{
+    background-color: #FFFFFF;
+    padding: 80px  50px 50px;
+    border-radius: 15px;
+    width: 425px;
+    height: 652px;
+    @include flex-col(30px);
+    header{
+
+        margin-bottom: 15px;
+        text-align: center;
+        h1{
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 15px;
+        }
+        p{
+            font-size: 18px;
+            font-weight: 400;
+            color: #000;
+            line-height: 134.7%;
+            
+        }
+    }
+    main{
+        @include flex-col(30px);
+        .radio-inputs{
+            
+            @include flex-col(20px);
+            .verification{
+                @include flex-default(6px);
+                align-items: center;
+                input:not(.mail){
+                    cursor: pointer;
+                    margin-top: -3px;
+                    position: relative;
+                    align-self: flex-start;
+                    appearance: none;
+                    min-width: 30px;
+                    height: 30px;
+                    border-radius: 15px;
+                    border: 2px solid #000000;
+                    @include center();
+                    &:checked::before{
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        background-color: $button-color;
+                        border-radius: 50%;
+                    }
+                     &:checked + .input-info{
+                         .show{display: block;}
+                     }
+                     
+                }
+                .input-info{
+                    
+                    @include flex-col(10px);
+                    label{
+                        font-size: 18px;
+                        font-weight: 400;
+                        color: #000;
+                        line-height: 134.7%;
+                    }
+                    .show{
+                        display: none;
+                        .mail {
+                            border: 1px solid rgba($color: #1B1A34, $alpha: .29);
+                            margin-bottom: 15px;
+                            padding: 10px 17px;
+                            width: 85%;
+                            border-radius: 10px;
+                            &:focus:not(:valid){
+                                border: 1px solid red;
+                            }
+                        }
+                        
+                        p{
+                            font-size: 14px;
+                            color: rgba($color: #1B1A34, $alpha: .67) ;
+                            margin-bottom: 20px;
+                            
+                        }
+                        button{
+                            width: 140px;
+                            height: 46px;
+                            background-color: $button-color;
+                            color: #FFFFFF;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .remember{
+            @include flex-default(8px);
+            margin-top: 20px;
+            align-items: center;
+            input{
+                align-self: flex-start;
+                margin-top: -2px;
+                appearance: none;
+                min-width:30px;
+                height: 30px;
+                border: 1px solid rgba($color: $button-color, $alpha: .7);
+                border-radius: 5px;
+                &:checked{
+                    background: url(../icons/check.svg)no-repeat center;
+                    background-size: 20px;
+                }
+
+            }
+            .input-info{
+                label{
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #000;
+                    line-height: 134.7%;
+                }
+                p{
+                    font-size: 14px;
+                    color: rgba($color: #1B1A34, $alpha: .67) ;
+                    margin-top: 10px;
+                }
+            }
+
+        }
+    }
+    footer{
+        margin-top: auto;
+        width: 100%;
+        background-color: red;
+        position: relative;
+        text-align: center;
+        @include flex-default(0px);
+        justify-content: center;
+        align-items: center;
+        a{
+            position: absolute;
+            top: .3px;  
+        }
+    }
+}
+.container2{
+    width: 425px;
+    height: 652px;
+    background-color:#FFFFFF;
+    border-radius: 15px;
+    
+    padding: 80px 65px 45px 60px;
+    @include flex-col(30px);
+    header{
+        text-align: center;
+        h1{
+            font-size: 24px;
+            color: #000000;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    }
+    main{
+        width: 302px;
+        
+        .inputs{
+            margin-bottom: 20px;
+            label{
+                @include flex-col(3px);
+                font-size: 18px;
+                color: #000000;
+                line-height:134.7%;
+                font-weight: bold;
+                input{
+                    padding: 17px 25px;
+                    border: 2px solid rgba($color: #1B1A34, $alpha: .29);
+                    border-radius: 10px;
+                    &::placeholder{
+                        color:rgba($color: #1B1A34, $alpha: .67);
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .button{
+            margin-bottom: 25px;
+            
+            button{
+                width: 100%;
+                height: 56px;
+                background-color: $button-color;
+                color: #FFFFFF;
+                border-radius: 10px;
+                cursor: pointer;
+                line-height: 134.7%;
+                font-weight: 400;
+            }
+        }
+        .keep-user{
+            width: 188px;
+            
+           
+            text-align: center;
+            label{
+                @include flex-default(6px);
+                align-items: center;
+                font-size: 18px;
+                font-weight: 400;
+                color: #000000;
+                line-height:134.7%;
+                
+                input{
+                    appearance: none;
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid rgba($color: $button-color, $alpha: .6);
+                    border-radius: 5px;
+                    background-color: transparent;
+                    &:checked{
+                        background: url(../icons/check.svg)no-repeat center;
+                        background-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        margin-top: 30px;
+        @include flex-col(15px);
+        text-align: center;
+        span{
+            font-size: 14px;
+            color: rgba($color: #1B1A34, $alpha: .67);
+            font-weight: 400;
+        }
+    }
+}
+

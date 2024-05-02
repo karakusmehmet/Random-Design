@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Verification</title>
+    <link rel="stylesheet" href="CSS/login-verification.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Login Verification</h1>
+            <p>To continue logging in we need you to <br> complete one of the following:</p>
+        </header>
+        <main>
+            <div class="radio-inputs">
+                <div class="verification email">
+                    <input checked id="first-verif" name="verif" type="radio">
+                    <div class="input-info">
+                        <label for="first-verif">Verification code via email</label>
+                        <div class="show">
+                            <p>We'll send a code to your email that can <br> enter to verify your identity.</p>
+                            <input required class="mail" type="email">
+                            <button>Send Email Code</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="verification SMS">
+                    <input id="second-verif" name="verif" type="radio">
+                    <div class="input-info">
+                        <label for="second-verif">Verification code via SMS</label>
+                        <div class="show">
+                            <p>We’ll send a code to your mobil phone <br> that can enter to verify your identity.</p>
+                            <button>Send SMS Code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="remember">
+                <input id="remember-checkbutton" type="checkbox">
+                <div class="input-info">
+                    <label for="remember-checkbutton">Remember this device</label>
+                    <p>Don’t select this option if you’re using a public computer</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <a href="#">Return to Login</a>
+        </footer>
+    </div>
+
+
+
+
+    <div class="container2">
+        <header>
+            <h1 class="login">Login</h1>
+            <a href="#">Create an account</a>
+        </header>
+        <main>
+            <div class="inputs username">
+                <label>
+                    Username
+                    <input class="input-t" placeholder="Enter your username" type="text">
+                </label>
+            </div>
+            <div class="inputs password">
+                <label>
+                    Password
+                    <input class="input-t" placeholder="Enter your password" type="password">
+                </label>
+            </div>
+            <div class="button">
+                <button>Log In</button>
+            </div>
+            <div class="keep-user">
+                <label>
+                    <input type="checkbox">
+                    Keep me logged in
+                </label>
+            </div>
+
+        </main>
+        <footer>
+            <a href="#">Forgot password?</a>
+            <span>©2001 - 2020 All Right Reserved</span>
+        </footer>
+    </div>
+
+</body>
+
+</html>
