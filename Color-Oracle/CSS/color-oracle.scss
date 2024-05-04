@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+@mixin flex-default($-gap) {
+    display: flex;
+    gap: $-gap;
+}
+
+@mixin flex-col($-gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $-gap;
+}
+
+@mixin center {
+    display: grid;
+    place-items: center;
+}
+
+$default-color : #13274F;
+html,
+body {
+    height: 100%;
+}
+
+body{
+    background: url(../images/gecisli.png);
+    background-size: cover;
+    font-family: "Montserrat" ,sans-serif;
+}
