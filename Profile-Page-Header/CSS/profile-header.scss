@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-default($-gap) {
+    display: flex;
+    gap: $-gap;
+}
+
+@mixin flex-col($-gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $-gap;
+}
+
+$default-font :"Poppins",sans-serif;
+$text-color : #13143C;
+
+
+
+html,
+body {
+    height: 100%;
+    
+}
+body{
+    @include flex-center;
+    background-color: #E5E5E5;
+    font-family: $default-font;
+    font-size: 16px;
+}
+
+.container{
+    padding: 42px;
+    border-radius: 29px;
+    background-color: #FFFAF2;
+    @include flex-default(249px);
+    align-items: center;
+    .profile{
+        @include flex-col(20px);
+        img{
+            width: 100px;
+            height: 100px;
+            border-radius: 39px;
+        }
+        .profile-detail{
+            @include flex-col(8px);
+            h1{
+                font-size: 24px;
+                color: $text-color;
+                font-weight: bold;
+            }
+            h3{
+                color: $text-color;
+                font-weight: 600;
+                font-size: 16px;
+            }
+            p{
+                font-size: 18px;
+                font-weight: 400;
+                color: $default-font;
+            }
+        }
+        .links{
+            @include flex-default(16px);
+            a{
+                padding:16px 16px ;
+                background-color: #FFFFFF;
+                border:1px solid #DFDFDF;
+                border-radius: 19px;
+                flex: 1;
+                @include flex-center();
+                svg{
+                    color: $text-color;
+                }
+            }
+        }
+    }
+    .interact{
+        
+        align-items: flex-end;
+        align-self: flex-end;
+        @include flex-col(96px);
+        .organizations{
+            @include flex-col(8px);
+            .bar-header{
+                @include flex-default(16px);
+                align-items: center;
+                span{
+                    flex: 1;
+                    font-size: 18px;
+                    color: $text-color;
+                }
+                svg{
+                    color: $text-color;
+                }
+            }
+            .loading-bar{
+                span{
+                    display: block;
+                    width: 414px;
+                    height: 13px;
+                    background-color: #DFDFDF;
+                    border-radius:5px ;
+                    span{
+                        width: 331px;
+                        background-color: #F17A37;
+                        border-radius: none;
+                    }
+                }
+            }
+        }
+        .follow{
+            @include flex-col(14px);
+            span{
+                text-align: end;
+                font-size: 24px;
+                color: $default-font;
+                font-weight: 400;
+                b{
+                    color: #000;
+                }
+            }
+            button{
+                width: 191px;
+                color:#FFFFFF ;
+                background-color:#13143C;
+                padding: 20px;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+    }
+}
