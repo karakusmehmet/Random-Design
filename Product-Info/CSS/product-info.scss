@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-default($-gap) {
+    display: flex;
+    gap: $-gap;
+}
+
+@mixin flex-col($-gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $-gap;
+}
+
+$default-font :"Poppins",
+sans-serif;
+$text-color : #191847;
+
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    @include flex-center;
+    background-color: #E5E5E5;
+    font-family: $default-font;
+    font-size: 16px;
+}
+
+.container {
+    padding: 82px;
+    background-color: #FFFFFF;
+    box-shadow: 0 24px 28px 9px rgba(#B3C1D9, .33);
+    width: 887px;
+    height: 661px;
+    border-radius: 15px;
+
+    .product {
+        flex: 1;
+        @include flex-default(32px);
+
+        img {
+            width: 249px;
+            height: 223px
+        }
+
+        .product-info {
+            @include flex-col(32px);
+
+            .product-name {
+                width: 419px;
+                height: 111px;
+
+                .free {
+                    background-color: $text-color;
+                    color: #FFFFFF;
+                    border-radius: 20px;
+                    padding: 4px 8px;
+                    font-weight: 600;
+                    display: block;
+                    width: max-content;
+                    margin-bottom: 10px;
+                }
+
+                h1 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: $text-color;
+                }
+            }
+
+            .product-price {
+                @include flex-col(0px);
+
+                .cross {
+                    text-decoration: line-through;
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: $text-color;
+                }
+
+                .big-bold {
+                    font-size: 48px;
+                    font-weight: bold;
+                    color: $text-color;
+                }
+
+                .offer {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: rgba($text-color, .5);
+                }
+            }
+
+            .add-card {
+                button {
+                    padding: 16px;
+                    width: 100%;
+                    color: #FFFFFF;
+                    font-size: 18px;
+                    font-weight: medium;
+                    border-radius: 8px;
+                    background-color: #4788E9;
+                    box-shadow: 0 7px #1C57EE;
+                    cursor: pointer;
+                    transition: transform 500ms;
+
+                    &:hover {
+                        transform: scale(1.01);
+                    }
+
+                    &:focus {
+                        transform: scale(0.8);
+                        background-color: green;
+                        box-shadow: 0 7px rgb(84, 139, 84);
+
+                    }
+                }
+            }
+
+            .deneme{
+                @include flex-default(8px);
+                align-items: center;
+                .green-circle{
+                    width: 13px;
+                    height: 13px;
+                    background-color: #00D98B;
+                    border-radius: 50%;
+                }
+                .stock{
+                   color: #000000; 
+                   font-size: 14px;
+                   font-weight: medium;
+                }
+            }
+            .cart-wishlist{
+                width: 442px;
+                @include flex-default(16px);
+                .btn{
+                    &:first-child{ 
+                        svg{
+                            margin-left: 10px;
+                        }  
+                    }
+                    flex: 1;
+                    padding: 16px;
+                    color: $text-color;
+                    font-size: 18px;
+                    border: 2px solid #C9C9DA ;
+                    border-radius: 8px;
+                    font-weight: 600;
+                    @include flex-default(10px);
+                    align-items: center;
+                    background-color: transparent;
+                    cursor:pointer; 
+                    &:hover{
+                        transform: translateY(5px);
+                        &:first-child{
+                            border: 2px solid rgb(47, 105, 47);
+                        }
+                        &:last-child{
+                            border: 2px solid orangered;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
