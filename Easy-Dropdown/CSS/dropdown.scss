@@ -24,7 +24,8 @@
     gap: $-gap;
 }
 
-$default-font :"Poppins",sans-serif;
+$default-font :"Poppins",
+sans-serif;
 $text-color : #11103C;
 
 
@@ -39,4 +40,118 @@ body {
     background-color: #E5E5E5;
     font-family: $default-font;
     font-size: 16px;
+}
+
+.container {
+    width: 570px;
+    height: 506px;
+    background-color: transparent;
+    position: relative;
+    @include flex-col(0);
+    align-items: center;
+    justify-content: center;
+
+    .blue-box {
+        width: 346px;
+        height: 356px;
+        background-color: #99A8FF;
+        border-radius: 30px;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .small-navbar {
+        width: 100%;
+        @include flex-default(0px);
+        background-color: #FAFAFF;
+        padding: 32px;
+        border-radius: 16px;
+
+        .templates {
+            position: relative;
+            white-space: nowrap;
+            @include flex-col(0px);
+            align-items: center;
+            &:has(:focus) i{
+                transform: rotate(180deg);
+            }
+            &:focus-within nav{
+                opacity: 1;
+                visibility: visible;
+            }
+            button{
+                padding: 16px;
+                font-size: 16px;
+                font-weight: 500;
+                border-radius: 8px;
+                background-color: #EDEFFB;
+                color: $text-color;
+                @include flex-default(3px);
+                align-items: center;
+                cursor: pointer;
+                i{
+                    width: 22px;
+                    height: 22px;
+                    transition: transform 300ms;
+                    @include flex-center();
+                }
+                
+            }
+            nav {
+                @include flex-col(3px);
+                position: absolute;
+                top: 120%;
+                width: 146px;
+                padding: 16px;
+                background-color: #FFFFFF;
+                border-radius: 16px;
+                box-shadow: 0px 16px 15px rgba($text-color, .10);
+                transition: 300ms all;
+                opacity: 0;
+                visibility: hidden;
+                a{
+                    padding: 16px;
+                    color: $text-color;
+                    font-size: 16px;
+                    font-weight: 500;
+                    border-radius: 8px;
+                    &:hover{
+                        background-color: #EDEFFB;
+                    }
+                }
+            }
+        }
+        .input{
+            flex: 1;
+            height: 56px;
+            padding: 16px;
+            @include flex-default(0px);
+            label{
+                @include flex-default(4px);
+                align-items: center;
+                flex: 1;
+                i{
+                    width: 32px;
+                    height: 32px;
+                    @include flex-center();
+                    font-size: 25px;
+                }
+                
+                input{
+                    flex: 1;
+                    width: 100;
+                    background-color: transparent;
+                    font-size: 16px;
+                    font-weight: 500;
+                    &::placeholder {
+                        font-size: 16px;
+                        color: $text-color;
+                        font-weight: 400;
+                    }
+                }
+            }
+            
+        }
+    }
+
 }
