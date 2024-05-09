@@ -38,7 +38,151 @@ html {
 }
 
 body {
-    @include flex-center;
     font-family: $default-font;
     font-size: 16px;
+}
+
+.container {
+    &:has(:checked) {
+        background-color: #E5E5E5;
+    }
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include flex-center();
+    .notification-button {
+        position: absolute;
+        z-index: 1;
+        
+        &:has(:checked) {
+            top: 20%;
+            left: 65%;
+            background-color: #0C0E41;
+            + .popup{
+                visibility: visible;
+                opacity: 1;
+                top: 50%;
+                left: 50%;
+            }
+            i {
+                color: #fff;
+            }
+        }
+        input {
+            display: none;
+        }
+        width: 83px;
+        height: 83px;
+        @include flex-center();
+        border-radius:50%;
+        cursor: pointer;
+        i {
+            width: 44px;
+            height: 44px;
+            font-size: 30px;
+            @include flex-center();
+            color: #000;
+        }
+    }
+    .popup {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 500ms;
+        background-color: #fff;
+        padding: 40px;
+        position: absolute;
+        top:150%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 16px;
+        @include flex-col(29px);
+        .message-box {
+            @include flex-col(24px);
+            h3 {
+                font-size: 22px;
+                color: #0C0E41;
+                font-weight: 600;
+                font-family: $default-font;
+            }
+            .message-detail {
+                @include flex-default(24px);
+                align-items: center;
+
+                .message-icon {
+                    width: 89px;
+                    height: 89px;
+                    background-color: #FFE9F2;
+                    border-radius: 8px;
+                    @include flex-center();
+
+                    i {
+                        width: 44px;
+                        height: 44px;
+                        font-size: 33px;
+                        color: #C83974;
+                        @include flex-center();
+                    }
+                }
+
+                .time-message {
+                    @include flex-col(0px);
+
+                    .time {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #0C0E41;
+                        font-family: $default-font;
+                    }
+
+                    .message {
+                        font-size: 18px;
+                        font-family: $default-font;
+                        color: #0C0E41;
+                    }
+                }
+            }
+        }
+        .link {
+          
+            @include flex-default(16px);
+            width: max-content;
+            padding-left: 113px;
+            .icon {
+                padding: 8px 16px;
+                border-radius: 34px;
+                @include flex-default(8px);
+                border: 1px solid;
+                a{
+                    @include flex-default(8px);
+                    align-items: center;
+                    i{
+                        width: 34px;
+                        height: 34px;
+                        font-size: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    span{
+                        font-weight: 600;
+                        font-family: $default-font;
+                        font-size: 18px;
+                    }
+                }
+                &.twitter {
+
+                    border-color: #158ABB;
+                    span,i{
+                        color: #158ABB;
+                    }
+                }
+                &.facebook {
+                    border-color: #205195;
+                    span,i{
+                        color: #205195;
+                    }
+                }
+            }
+        }
+    }
 }
