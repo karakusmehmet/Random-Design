@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+$default-font :"Poppins",sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-family: $default-font;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-default($-gap) {
+    display: flex;
+    gap: $-gap;
+}
+
+@mixin flex-col($-gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $-gap;
+}
+
+html,
+body {
+    height: 100%;
+}
+body{
+    background-color: #EAE4D0;
+}
+
+.container{
+    width: 1100px;
+    height: 336px;
+    background-color:#ECD8CA;
+    border-radius:25px;
+    padding: 47px 51px;
+    margin: 50px auto;
+    &:has(input:checked) .box:has(input:checked) {
+        background-color: #FFFFFF;
+    }
+    
+    .boxes{
+        &:has(input[id="btn2"]:checked) + .shown{
+            opacity: 1;
+            visibility: visible;
+        }
+        background-color: transparent;
+        @include flex-default(10px);
+        width: 998px;
+        height: 242px;
+        .box{
+            
+            position: relative;
+            width: 242px;
+            height: 242px;
+            @include flex-col(0);
+            border-radius: 15px;
+            background-color: rgba(#FFFFFF, .7);
+            &:not(:nth-of-type(4))::before {
+                content: "";
+                position: absolute;
+                padding: 5px 10px;
+                top: 25px;
+                right: 25px;
+                background-color: #00B7A1;
+                color: #FFFFFF;
+                border-radius: 15px;
+                letter-spacing: 1px;
+            }
+            @for $i from 1 through 3{
+                @if $i == 1{
+                    &:nth-of-type(#{$i})::before{
+                        content: "112";
+                    }
+                }
+                @if $i == 2{
+                    &:nth-of-type(#{$i})::before{
+                        content: "63";
+                    }
+                }
+                @if $i == 3{
+                    &:nth-of-type(#{$i})::before{
+                        content: "47";
+                    }
+                }
+            }
+             
+            @include flex-center();
+            span{
+                font-size: 24px;
+                font-weight: medium;
+                display: block;
+                width: 102px;
+                height: 36px;
+                text-align: center;
+                color: #1A2346;
+                font-weight: 450;
+            }
+            input{
+                display: none;
+            }
+            label{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: transparent;
+            }
+        }
+    }
+    .shown{
+        opacity: 0;
+        visibility: hidden;
+        top: 68%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        width: 451px;
+        height: 588px;
+        padding: 30px;
+        border-radius: 15px;
+        background-color: #FFFFFF;
+        @include flex-col(30px);
+        .nearest-shops{
+            border-radius: 15px;
+            background-color: #FFF5F2;
+            border: 1px solid #F8E0DD;
+            padding: 15px 25px 25px 25px;
+            @include flex-col(14px);
+            h1{
+                font-size: 22px;
+                color: #1A2346;
+            }
+            .zip-location{
+                
+                align-items: flex-end;
+                @include flex-default(10px);
+                .zip{
+                    flex: 0;
+                    
+                    span{
+                        font-size: 14px;
+                        color: #1A2346;
+                        font-weight: 450;
+                    }
+                    input{
+                        width: 105px;
+                        height: 57px;
+                        border-radius: 5px;
+                        padding: 15px 25px;
+                        border: 1px solid #DEBEBA;
+                        margin-top: 5px;
+                        font-size: 18px;
+                        color: #1A2346;
+                        font-weight: 450;
+                    }
+                }
+                .location{
+                    margin-bottom: 15px;
+                    @include flex-default(5px);
+                    align-items: center;
+                    span{
+                        font-size: 16px;
+                        font-weight: 450;
+                        color: #1A2346;
+                    }
+                }
+            }
+        }
+        .addresses{
+            padding: 0 27px;
+            & .address:first-child{
+                margin-bottom: 20px;
+                border-bottom: 1px solid #F9E2DF;
+                padding-bottom: 18px   
+            }
+            .address{
+                
+                .header{
+                    @include flex-default(0);
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 12px;
+                    h2{
+                        font-size: 18px;
+                        color: #1A2346;
+                        font-weight: 700;
+                    }
+                    span{
+                        padding: 2px 10px;
+                        color: #FFFFFF;
+                        background-color:#F46A58;
+                        border-radius: 38px;
+                    }
+                }
+                .address-content{
+                    span{
+                        font-size: 16px;
+                        color: #1A2346;
+                        font-weight: 450;
+                    }
+                }
+            }
+        }
+        .see-button{
+            margin-top: 30px;
+            button{
+                color: #FFFFFF;
+                padding: 10px 20px;
+                font-size: 16px;
+                font-weight: 450;
+                background-color:#00B7A1 ;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
