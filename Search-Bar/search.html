@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search UI</title>
+    <link rel="stylesheet" href="CSS/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="search-bar">
+        <label class="search-jobs">
+            <i class="fa fa-search"></i>
+            <input placeholder="Search jobs by keyword" type="text">
+        </label>
+        <div class="nav-bar">
+            <div tabindex="2" class="bar jobs">
+                <button>
+                    All jobs
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="nav">
+                    <h2>Location</h2>
+                    <div class="country-input">
+                        <span>Country</span>
+                        <div tabindex="32" class="country">
+                            <button>
+                                Norway
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div tabindex="31" class="nav-countries">
+                                <nav tabindex="12">
+                                    <a href="#">Hollanda</a>
+                                    <a href="#">Hollanda</a>
+                                    <a href="#">Hollanda</a>
+                                    <a href="#">Hollanda</a>
+                                    <a href="#">Hollanda</a>
+                                    <a href="#">Hollanda</a>
+                                </nav>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="city-input">
+                        <span>City</span>
+                       <div class="city">
+                            <button>Norway</button>
+                       </div>
+                    </div>
+                </div>
+            </div>
+           <div tabindex="3" class="bar location">
+            <button>
+                Location
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+           </div>
+           <div tabindex="4" class="bar fields">
+            <button>
+                All fields
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+           </div>
+        </div>
+    </div>
+</body>
+</html>
