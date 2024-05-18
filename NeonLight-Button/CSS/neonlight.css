@@ -11,7 +11,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 10px;
   background: #050801;
   font-family: arial;
 }
@@ -27,6 +28,7 @@ a {
   letter-spacing: 4px;
   overflow: hidden;
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
+  line-height: 0.7em;
 }
 a:hover {
   background: #03e9f4;
