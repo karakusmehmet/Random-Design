@@ -1,4 +1,4 @@
-[TR]
+#### TR
 # Random Design
 
 **Random Design**, HTML, CSS ve SASS kullanarak mini projeler yaparak web geliştirme becerilerinizi geliştirmek için oluşturulmuş bir projedir. Bu repo, web tasarımında temel beceriler edinmek ve CSS/SASS ile daha fazla stil oluşturmayı öğrenmek isteyenler için çeşitli mini projeleri içerir.
@@ -24,8 +24,8 @@ Projeyi yerel ortamınızda çalıştırmak için:
 1. Reponun bir kopyasını indirin.
    ```bash
    git clone https://github.com/kullaniciadiniz/random-design.git
-
-[EN]
+---
+#### EN
 # Random Design
 
 **Random Design** is a project created to improve your web development skills by building mini projects using HTML, CSS, and SASS. This repository contains various mini projects for those who want to learn the basics of web design and create more styles with CSS/SASS.
