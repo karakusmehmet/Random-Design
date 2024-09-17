@@ -23,7 +23,7 @@ Projeyi yerel ortamınızda çalıştırmak için:
 
 1. Reponun bir kopyasını indirin.
    ```bash
-   git clone https://github.com/kullaniciadiniz/random-design.git
+   git clone https://github.com/karakusmehmet/Random-Design.git
 ---
 #### EN
 # Random Design
