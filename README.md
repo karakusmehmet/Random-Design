@@ -50,4 +50,4 @@ To run the project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/random-design.git
+   git clone https://github.com/karakusmehmet/Random-Design.git
