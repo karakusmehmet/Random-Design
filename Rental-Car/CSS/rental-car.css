@@ -14,7 +14,7 @@ body {
 }
 
 body {
-  background: #E5E5E5;
+  background: #e5e5e5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -34,7 +34,7 @@ body {
   font-size: 32px;
   font-weight: bold;
   font-family: "Merriweather", sans-serif;
-  color: #0D1C52;
+  color: #0d1c52;
 }
 .container main {
   display: flex;
@@ -53,25 +53,25 @@ body {
   gap: 8px;
 }
 .container main .pick-up .location label {
-  color: #0D1C52;
+  color: #0d1c52;
   font-weight: bold;
   font-size: 14px;
 }
 .container main .pick-up .location input {
-  border: 1px solid #8F9DCE;
+  border: 1px solid #8f9dce;
   padding: 16px;
   border-radius: 4px;
   font-size: 16px;
-  color: #0D1C52;
+  color: #0d1c52;
 }
 .container main .pick-up .location input::-moz-placeholder {
   font-size: 16px;
-  color: #0D1C52;
+  color: #0d1c52;
   font-weight: bold;
 }
 .container main .pick-up .location input::placeholder {
   font-size: 16px;
-  color: #0D1C52;
+  color: #0d1c52;
   font-weight: bold;
 }
 .container main .pick-up .deliver-check {
@@ -80,14 +80,14 @@ body {
   align-items: center;
 }
 .container main .pick-up .deliver-check span {
-  color: #0D1C52;
+  color: #0d1c52;
   font-weight: bold;
 }
 .container main .pick-up .deliver-check .check-deliver {
   width: 25px;
   height: 25px;
   position: relative;
-  border: 1px solid #8F9DCE;
+  border: 1px solid #8f9dce;
   border-radius: 4px;
   transition: 500ms background-color;
   display: flex;
@@ -95,7 +95,7 @@ body {
   justify-content: center;
 }
 .container main .pick-up .deliver-check .check-deliver:has(input:checked) {
-  background-color: #0D1C52;
+  background-color: #0d1c52;
 }
 .container main .pick-up .deliver-check .check-deliver:has(input:checked) i {
   transform: scale(1);
@@ -108,7 +108,7 @@ body {
 .container main .pick-up .deliver-check .check-deliver i {
   transform: scale(0);
   transition: 500ms transform;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .container main .dates {
   display: flex;
@@ -121,7 +121,7 @@ body {
   gap: 8px;
 }
 .container main .dates .date-pickup h6 {
-  color: #0D1C52;
+  color: #0d1c52;
   font-size: 14px;
   font-weight: bold;
 }
@@ -130,13 +130,13 @@ body {
   padding: 16px;
   display: flex;
   gap: 10px;
-  border: 1px solid #8F9DCE;
+  border: 1px solid #8f9dce;
   border-radius: 4px;
 }
 .container main .dates .date-pickup .day-month-year span {
   flex: 1;
   font-weight: 18px;
-  color: #0D1C52;
+  color: #0d1c52;
   font-weight: bold;
 }
 .container main .dates .date-pickup .day-month-year i:nth-of-type(1) {
@@ -146,7 +146,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0D1C52;
+  color: #0d1c52;
 }
 .container main .dates .date-pickup .day-month-year i:nth-of-type(2) {
   width: 25px;
@@ -155,12 +155,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0D1C52;
+  color: #0d1c52;
 }
 .container main .dates .date-pickup .time {
   display: flex;
   gap: 0;
-  border: 1px solid #8F9DCE;
+  border: 1px solid #8f9dce;
   border-radius: 4px;
 }
 .container main .dates .date-pickup .time .hour {
@@ -168,13 +168,13 @@ body {
   gap: 10px;
   align-items: center;
   flex: 1;
-  border-right: 1px solid #8F9DCE;
+  border-right: 1px solid #8f9dce;
   padding: 16px;
 }
 .container main .dates .date-pickup .time .hour span {
   flex: 1;
   font-weight: 18px;
-  color: #0D1C52;
+  color: #0d1c52;
   font-weight: bold;
 }
 .container main .dates .date-pickup .time .hour i:nth-of-type(1) {
@@ -184,7 +184,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0D1C52;
+  color: #0d1c52;
 }
 .container main .dates .date-pickup .time .hour i:nth-of-type(2) {
   width: 25px;
@@ -193,10 +193,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0D1C52;
+  color: #0d1c52;
 }
 .container main .dates .date-pickup .time .min {
-  border-left: 1px solid #8F9DCE;
+  border-left: 1px solid #8f9dce;
   flex: 1;
   padding: 16px;
   align-items: center;
@@ -206,7 +206,7 @@ body {
 .container main .dates .date-pickup .time .min span {
   flex: 1;
   font-weight: 18px;
-  color: #0D1C52;
+  color: #0d1c52;
   font-weight: bold;
 }
 .container main .dates .date-pickup .time .min i {
@@ -216,7 +216,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0D1C52;
+  color: #0d1c52;
 }
 .container main .dates .date-delivery {
   flex: 1;
@@ -227,14 +227,14 @@ body {
   align-items: center;
 }
 .container main .age-check span {
-  color: #0D1C52;
+  color: #0d1c52;
   font-weight: bold;
 }
 .container main .age-check .check-deliver {
   width: 25px;
   height: 25px;
   position: relative;
-  border: 1px solid #8F9DCE;
+  border: 1px solid #8f9dce;
   border-radius: 4px;
   transition: 500ms background-color;
   display: flex;
@@ -242,7 +242,7 @@ body {
   justify-content: center;
 }
 .container main .age-check .check-deliver:has(input:checked) {
-  background-color: #0D1C52;
+  background-color: #0d1c52;
 }
 .container main .age-check .check-deliver:has(input:checked) i {
   transform: scale(1);
@@ -255,7 +255,7 @@ body {
 .container main .age-check .check-deliver i {
   transform: scale(0);
   transition: 500ms transform;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .container main .age-check > i {
   width: 29px;
@@ -279,20 +279,20 @@ body {
   width: 22.5px;
   height: 22.5px;
   font-size: 20px;
-  color: #0D1C52;
+  color: #0d1c52;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .container main .infos .info span {
-  color: #0D1C52;
+  color: #0d1c52;
   font-weight: bold;
   font-size: 18px;
 }
 .container .search-button button {
   padding: 42px;
-  background-color: #FE6F4F;
-  color: #FFFFFF;
+  background-color: #fe6f4f;
+  color: #ffffff;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
